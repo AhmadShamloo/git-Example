@@ -3,9 +3,13 @@ const hbs = require('hbs');
 
 const app = new express();
 
+const port=3000;
+
 app.get('/',(req,res)=>{
     res.send('سلام');
 });
 
-app.listen('3000');
+app.listen(port,()=>{
+    console.log(`server is runing at ${port}.`);
+});
 
